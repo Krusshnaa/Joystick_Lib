@@ -5,4 +5,4 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
   - FILE="-Dfile=Joystick_Lib-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.Krusshnaa -DartifactId=Joystick_Demo -Dversion=1.1 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.Krusshnaa -DartifactId=Joystick_Lib -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
