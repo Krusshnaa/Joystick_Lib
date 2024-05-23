@@ -1,5 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.4.1'
+
+    }
+}
+
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -17,13 +30,24 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+            consumerProguardFiles 'consumer-rules.pro'
+
         }
     }
+ java{
+     toolchain {
+         languageVersion=JavaLanguageVersion.of(17)
+     }
+ }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+
 }
+
 
 dependencies {
 
@@ -32,4 +56,21 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+afterEvaluate{
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.github.Krusshnaa'
+                artifactId = 'Joystick_Lib'
+                version = "1.0"
+                pom {
+                    description = 'Simple Joystick Library'
+                }
+            }
+        }
+        repositories {
+            mavenLocal()
+        }
+    }
 }
