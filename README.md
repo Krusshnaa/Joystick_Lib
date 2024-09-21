@@ -141,3 +141,8 @@ Here is an example of what the joystick UI might look like when implemented in a
 
  <img src="Example.png" alt="Joystick Example" width="300"/>   
 
+## License
+This project is licensed under the BSD 3-Clause "New" or "Revised" License. You are free to use, modify, and distribute this project as long as proper attribution is provided.
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests if you have suggestions or improvements.
