@@ -22,12 +22,12 @@ Add the following dependencies in your `build.gradle` file:
 dependencies {
     implementation("com.github.Krusshnaa:Joystick_Lib:1.0")
 }
-```
-
-
-
-    
-```gradle.settings
+```     
+                 
+              
+Add the following dependencies in your `settings.gradle` file:
+            
+```gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
